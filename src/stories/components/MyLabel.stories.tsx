@@ -4,6 +4,10 @@ import { MyLabel } from '../../components/MyLabel';
 const meta = {
   title: 'UI/MyLabel',
   component: MyLabel,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 } satisfies Meta<typeof MyLabel>;
 
 export default meta;
