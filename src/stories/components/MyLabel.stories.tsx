@@ -10,6 +10,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select' },
+    backgroundColor: { control: 'color' },
     allCaps: {
       control: 'boolean',
       defaultValue: false,
@@ -58,5 +59,14 @@ export const Tertiary: Story = {
     label: 'hola mundo Tertiary',
     size: 'normal',
     color: 'tertiary',
+  },
+};
+
+export const CustomeBackgroundColor: Story = {
+  args: {
+    label: 'hola mundo BackgroundColor',
+    size: 'normal',
+    color: 'tertiary',
+    backgroundColor: 'yellow',
   },
 };
