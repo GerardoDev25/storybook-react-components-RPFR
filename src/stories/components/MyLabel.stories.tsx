@@ -1,11 +1,30 @@
+import { Meta, StoryObj } from '@storybook/react';
 import { MyLabel } from '../../components/MyLabel';
 
-export default {
+const meta = {
   title: 'UI/MyLabel',
   component: MyLabel,
-};
+} satisfies Meta<typeof MyLabel>;
 
-const Template = () => <MyLabel />;
-export const Basic = Template.bind({});
-export const Allcaps = Template.bind({});
-export const Secundary = Template.bind({});
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Basic: Story = {
+  args: {
+    label: 'hola mundo',
+    size: 'normal',
+  },
+};
+export const Allcaps: Story = {
+  args: {
+    label: 'hola mundo',
+    size: 'h1',
+  },
+};
+export const Secundary: Story = {
+  args: {
+    label: 'hola mundo secudary',
+    size: 'h2',
+  },
+};
