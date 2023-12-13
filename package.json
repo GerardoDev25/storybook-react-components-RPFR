@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://gerardodev25.github.io/storybook-react-components-RPFR/",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "build": "storybook build",
