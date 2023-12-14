@@ -1,12 +1,28 @@
 {
-  "name": "04-my-storybook",
-  "private": true,
-  "version": "0.0.0",
+  "name": "gml-my-storybook-components",
+  "version": "0.1.0",
+  "private": false,
   "type": "module",
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
   "homepage": "https://gerardodev25.github.io/storybook-react-components-RPFR/",
+  "repository": {
+    "url": "https://github.com/GerardoDev25/storybook-react-components-RPFR",
+    "type": "git"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": "storybook build && touch ./storybook-static/.nojekyll",
+    "build": ":todo implementar storybook build && touch ./storybook-static/.nojekyll",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
