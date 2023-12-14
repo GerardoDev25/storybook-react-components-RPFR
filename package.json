@@ -22,7 +22,10 @@
   ],
   "scripts": {
     "dev": "storybook dev -p 6006",
-    "build": ":todo implementar storybook build && touch ./storybook-static/.nojekyll",
+    "clean": "rimraf dist/",
+    "copy-files": "cpx \"src/**/*.css\" dist/",
+    "build": "yarn clean && tsc && yarn copy-files",
+    "build:old": "storybook build && touch ./storybook-static/.nojekyll",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -31,6 +34,10 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "typescript": "~5.3.3"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.4",
@@ -46,10 +53,12 @@
     "@typescript-eslint/eslint-plugin": "^6.10.0",
     "@typescript-eslint/parser": "^6.10.0",
     "@vitejs/plugin-react": "^4.2.0",
+    "cpx": "^1.5.0",
     "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
     "eslint-plugin-storybook": "^0.6.15",
+    "rimraf": "^5.0.5",
     "storybook": "^7.6.4",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
